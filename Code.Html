@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DALAYAR | Bicycle Lifestyle Co., Ltd.</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Prompt for Thai Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Prompt', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            light: '#e0f2fe', // sky-100
+                            DEFAULT: '#0369a1', // sky-700
+                            dark: '#082f49', // sky-900
+                            accent: '#f59e0b', // amber-500
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        .gradient-bg {
+            background: linear-gradient(135deg, #082f49 0%, #0369a1 100%);
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased font-sans">
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md fixed w-full z-50 top-0">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20">
+                <div class="flex items-center">
+                    <a href="#" class="flex-shrink-0 flex items-center gap-3">
+                        <div class="w-10 h-10 bg-brand-dark text-white rounded-lg flex items-center justify-center font-bold text-xl">D</div>
+                        <span class="font-bold text-2xl tracking-tight text-brand-dark">DALAYAR<span class="text-brand-accent">.</span></span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#about" class="text-gray-600 hover:text-brand font-medium transition">เกี่ยวกับเรา</a>
+                    <a href="https://shop.line.me/@213njvrj" target="_blank" class="text-gray-600 hover:text-brand font-medium transition">สินค้าและบริการ</a>
+                    <a href="#policy" class="text-gray-600 hover:text-brand font-medium transition">นโยบายและการชำระเงิน</a>
+                    <a href="#contact" class="text-gray-600 hover:text-brand font-medium transition">ติดต่อเรา</a>
+                    <a href="https://shop.line.me/@213njvrj" target="_blank" class="bg-brand text-white px-5 py-2.5 rounded-full font-medium hover:bg-brand-dark transition shadow-lg shadow-brand/30 flex items-center gap-2">
+                        <i class="fa-brands fa-line"></i> LINE SHOPPING
+                    </a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="flex items-center md:hidden">
+                    <button type="button" class="text-gray-600 hover:text-gray-900 focus:outline-none" aria-label="Toggle menu">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section Placeholder (Optional context based on provided mockups) -->
+    <section class="mt-20 pt-16 pb-20 lg:pt-24 lg:pb-28 overflow-hidden gradient-bg text-white relative">
+        <div class="absolute inset-0 opacity-10 bg-[url('https://cdn.phototourl.com/member/2026-10-21-45363e1c-12b6-4949-a75f-671fe8e9c39f.jpg')] bg-cover bg-center"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6">
+                ขับเคลื่อนนวัตกรรม <span class="text-brand-accent">ยานยนต์ไฟฟ้า</span>
+            </h1>
+            <p class="mt-4 text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto font-light mb-10">
+                ผู้นำเข้าและจัดจำหน่าย E-Bike, สกู๊ตเตอร์, เซลล์แบตเตอรี่มาตรฐานสากล พร้อมวิศวกรรมความแม่นยำและบริการระดับพรีเมียม
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="https://shop.line.me/@213njvrj" target="_blank" class="bg-white text-brand-dark px-8 py-3.5 rounded-full font-semibold hover:bg-gray-100 transition shadow-lg text-lg flex items-center justify-center gap-2">
+                    ดูสินค้าทั้งหมด <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <a href="https://line.me/R/ti/p/@213njvrj" target="_blank" class="bg-[#00B900] text-white px-8 py-3.5 rounded-full font-semibold hover:bg-[#009900] transition shadow-lg text-lg flex items-center justify-center gap-2">
+                    <i class="fa-brands fa-line text-xl"></i> สอบถามแอดมิน
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section (4 Strengths) -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-brand font-semibold tracking-wider uppercase text-sm">About DALAYAR</span>
+                <h2 class="mt-2 text-3xl md:text-4xl font-bold text-gray-900">เบื้องหลังความสำเร็จของเรา</h2>
+                <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
+                    เราไม่ได้แค่ขายสินค้า แต่กำลังสร้างมาตรฐานใหม่ด้วยปรัชญาและระบบการทำงานที่น่าทึ่ง เพื่อยกระดับคุณภาพเทคโนโลยีไทย
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100 card-hover relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-brand-light rounded-bl-full -z-10 transition-transform group-hover:scale-110"></div>
+                    <div class="w-14 h-14 bg-brand text-white rounded-xl flex items-center justify-center text-2xl mb-6 shadow-md">
+                        <i class="fa-solid fa-chess-king"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">1. ปรัชญา "เจ้าป่า"</h3>
+                    <p class="text-gray-600 leading-relaxed text-sm">
+                        สัญลักษณ์ของภาวะผู้นำที่ทรงพลัง สงบนิ่ง และยึดมั่นในหลักการอย่างแน่วแน่ นิ่งในจังหวะที่เหมาะสม เด็ดขาดด้วยความเป็นมืออาชีพ ปกป้องด้วยความไว้วางใจ และยึดหลักการความปลอดภัยสูงสุด
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100 card-hover relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-brand-light rounded-bl-full -z-10 transition-transform group-hover:scale-110"></div>
+                    <div class="w-14 h-14 bg-brand text-white rounded-xl flex items-center justify-center text-2xl mb-6 shadow-md">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">2. ระบบที่โปร่งใส</h3>
+                    <p class="text-gray-600 leading-relaxed text-sm">
+                        อาวุธลับของเราคือระบบที่ตรวจสอบได้ ให้ค่า <b>คุณภาพสินค้า</b> มากกว่าราคา พร้อมบริการซ่อมบำรุง <span class="text-brand font-medium">SpotFix Pro</span> ที่ติดตามสถานะแบบเรียลไทม์ และระบบ QR Registration
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100 card-hover relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-brand-light rounded-bl-full -z-10 transition-transform group-hover:scale-110"></div>
+                    <div class="w-14 h-14 bg-brand text-white rounded-xl flex items-center justify-center text-2xl mb-6 shadow-md">
+                        <i class="fa-solid fa-handshake-angle"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">3. พันธมิตรระดับโลก</h3>
+                    <p class="text-gray-600 leading-relaxed text-sm">
+                        ร่วมมือกับ <b>PKCELL</b> ผู้ผลิตแบตเตอรี่ชั้นนำระดับโลก ภายใต้แบรนด์ <b>"Battery Daraya"</b> นำเสนอมาตรฐานสากล (ISO, CE, UL) ด้วยแนวคิด "มาตรฐานโลก เพื่อคนไทย"
+                    </p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100 card-hover relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-brand-light rounded-bl-full -z-10 transition-transform group-hover:scale-110"></div>
+                    <div class="w-14 h-14 bg-brand text-white rounded-xl flex items-center justify-center text-2xl mb-6 shadow-md">
+                        <i class="fa-solid fa-microchip"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">4. วิสัยทัศน์เทคโนโลยี</h3>
+                    <p class="text-gray-600 leading-relaxed text-sm">
+                        ก้าวข้ามแค่จักรยานไฟฟ้า แต่มุ่งสู่การเป็นผู้ให้บริการเทคโนโลยี B2B ด้านพลังงานพื้นฐาน ครอบคลุมทั้ง Agri-Tech, Industrial Robotics และ Energy Storage
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote Banner -->
+    <section class="relative py-24 bg-brand-dark overflow-hidden flex items-center justify-center">
+        <!-- Decorative elements -->
+        <div class="absolute top-0 left-0 w-full h-full overflow-hidden opacity-20 pointer-events-none">
+            <div class="absolute -top-24 -left-24 w-96 h-96 bg-brand rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob"></div>
+            <div class="absolute top-1/2 -right-24 w-96 h-96 bg-brand-accent rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob animation-delay-2000"></div>
+        </div>
+        
+        <div class="relative z-10 max-w-5xl mx-auto px-4 text-center">
+            <i class="fa-solid fa-quote-left text-4xl text-brand-accent opacity-50 mb-6 block"></i>
+            <h2 class="text-3xl md:text-5xl font-bold text-white leading-tight">
+                "อย่าหยุดแค่คำว่า <span class="text-brand-accent border-b-4 border-brand-accent pb-1">‘พอใช้ได้’</span><br class="hidden md:block">
+                ถ้าคุณเกิดมาเพื่อ <span class="text-brand-accent border-b-4 border-brand-accent pb-1">‘ยอดเยี่ยม’</span>"
+            </h2>
+            <div class="mt-8 flex items-center justify-center gap-4">
+                <div class="h-[1px] w-12 bg-white/30"></div>
+                <span class="text-white/80 font-medium tracking-widest uppercase text-sm">CEO. YARADIN MINYAN</span>
+                <div class="h-[1px] w-12 bg-white/30"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Policy & Payment Section -->
+    <section id="policy" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900">นโยบายร้านค้า & การชำระเงิน</h2>
+                <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
+                    ช้อปปิ้งอย่างมั่นใจ ด้วยระบบการชำระเงินที่ปลอดภัยและการรับประกันที่โปร่งใสตรวจสอบได้
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Payment Column -->
+                <div class="bg-white rounded-3xl p-8 shadow-lg border border-gray-100">
+                    <h3 class="text-2xl font-bold text-brand-dark mb-6 flex items-center gap-3">
+                        <i class="fa-solid fa-wallet text-brand"></i> ช่องทางการชำระเงิน
+                    </h3>
+                    <p class="text-gray-600 mb-8">เพื่อความสะดวกและปลอดภัย ลูกค้าสามารถเลือกชำระเงินได้หลายช่องทางผ่านระบบที่ได้มาตรฐาน</p>
+                    
+                    <div class="space-y-6">
+                        <!-- Line Shopping -->
+                        <div class="flex items-start gap-4 p-5 rounded-2xl bg-gray-50 border border-gray-100">
+                            <div class="w-12 h-12 rounded-full bg-[#00B900] text-white flex items-center justify-center text-2xl flex-shrink-0">
+                                <i class="fa-brands fa-line"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 text-lg">LINE SHOPPING / Rabbit LINE Pay</h4>
+                                <p class="text-sm text-gray-600 mt-1">รองรับบัตรเครดิต บัตรเดบิต และ e-Wallet ปลอดภัยทุกยอดบิล</p>
+                                <a href="https://shop.line.me/@213njvrj" target="_blank" class="inline-block mt-3 text-sm font-semibold text-[#00B900] hover:underline">สั่งซื้อผ่าน LINE SHOPPING &rarr;</a>
+                            </div>
+                        </div>
+
+                        <!-- QR Code -->
+                        <div class="flex items-start gap-4 p-5 rounded-2xl bg-blue-50 border border-blue-100">
+                            <div class="w-12 h-12 rounded-full bg-brand text-white flex items-center justify-center text-xl flex-shrink-0">
+                                <i class="fa-solid fa-qrcode"></i>
+                            </div>
+                            <div class="w-full">
+                                <h4 class="font-bold text-gray-900 text-lg">สแกน QR Code / โอนเงิน</h4>
+                                <p class="text-sm text-gray-600 mt-1 mb-4">รองรับ PromptPay และรับชำระผ่านทุกแอปธนาคาร</p>
+                                <!-- QR Image -->
+                                <div class="bg-white p-4 rounded-xl shadow-sm border border-gray-200 text-center">
+                                    <img src="https://cdn.phototourl.com/member/2026-10-21-e3901aad-4b32-4259-8537-8ba8012c4453.png" alt="QR Code รับชำระเงิน" class="mx-auto max-w-full h-auto w-48 rounded-lg mb-3">
+                                    <p class="font-semibold text-gray-800 text-sm">ดาลาร์ญาร์ ไลฟ์สไตล์จักรยาน</p>
+                                    <p class="text-xs text-gray-500">ชื่อบัญชี: ญารดินร์ มินยันท์</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-amber-50 border-l-4 border-amber-500 p-4 rounded-r-lg">
+                            <p class="text-xs text-amber-800">
+                                <i class="fa-solid fa-circle-info mr-1"></i> <b>หมายเหตุ:</b> การสั่งซื้อผ่านแพลตฟอร์มของ DALAYAR ทุกช่องทาง มีระบบบันทึกคำสั่งซื้อลง CRM เพื่อใช้เป็นหลักฐานการรับประกันโดยอัตโนมัติ
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Policy Column -->
+                <div class="space-y-6">
+                    <!-- Policy 1 -->
+                    <div class="bg-white rounded-3xl p-8 shadow-lg border border-gray-100 hover:border-brand/30 transition-colors">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="w-12 h-12 rounded-full bg-brand-light text-brand flex items-center justify-center text-xl">
+                                <i class="fa-solid fa-medal"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900">การรับประกันคุณภาพ</h3>
+                        </div>
+                        <p class="text-gray-600 pl-16">
+                            สินค้าประเภทแบตเตอรี่ (Battery Daraya) และชิ้นส่วนไฟฟ้า ผ่านการรับรองมาตรฐานสากล ISO, CE, UL มีการรับประกันความเสียหายจากการผลิตตามเงื่อนไขที่ระบุในแต่ละประเภทสินค้า
+                        </p>
+                    </div>
+
+                    <!-- Policy 2 -->
+                    <div class="bg-white rounded-3xl p-8 shadow-lg border border-gray-100 hover:border-brand/30 transition-colors">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="w-12 h-12 rounded-full bg-brand-light text-brand flex items-center justify-center text-xl">
+                                <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900">นโยบายการเปลี่ยนคืน</h3>
+                        </div>
+                        <p class="text-gray-600 pl-16">
+                            หากพบสินค้ามีข้อบกพร่องจากการผลิต สามารถแจ้งเปลี่ยนหรือเคลมได้ภายใน 7 วัน (นับจากวันที่ได้รับสินค้า) โดยสินค้าต้องอยู่ในสภาพสมบูรณ์และมี QR Code ลงทะเบียน
+                        </p>
+                    </div>
+
+                    <!-- Policy 3 -->
+                    <div class="bg-white rounded-3xl p-8 shadow-lg border border-gray-100 hover:border-brand/30 transition-colors">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="w-12 h-12 rounded-full bg-brand-light text-brand flex items-center justify-center text-xl">
+                                <i class="fa-solid fa-truck-fast"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900">การจัดส่ง (Shipping)</h3>
+                        </div>
+                        <p class="text-gray-600 pl-16">
+                            จัดส่งสินค้ารวดเร็วทั่วประเทศ สำหรับงานซ่อมสามารถติดตามสถานะการจัดส่งคืนและขั้นตอนการทำงานได้ผ่านระบบแจ้งเตือนอัตโนมัติ SpotFix Pro
+                        </p>
+                    </div>
+                    
+                    <div class="pl-2 pt-4">
+                        <a href="https://www.darayar.online/โปรดอานนโยบายของรววจากลกคาโดย-google" target="_blank" class="text-brand hover:text-brand-dark font-medium flex items-center gap-2">
+                            อ่านนโยบายฉบับเต็มและรีวิวจากลูกค้า <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Contact Section -->
+    <footer id="contact" class="bg-gray-900 text-white pt-20 pb-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8 mb-16">
+                
+                <!-- Brand Info -->
+                <div class="lg:col-span-4">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 bg-white text-brand-dark rounded-lg flex items-center justify-center font-bold text-xl">D</div>
+                        <span class="font-bold text-2xl tracking-tight text-white">DALAYAR<span class="text-brand-accent">.</span></span>
+                    </div>
+                    <p class="text-gray-400 mb-6 leading-relaxed">
+                        DALAYAR Bicycle Lifestyle Co., Ltd.<br>
+                        ผู้เชี่ยวชาญด้าน E-Bike และเทคโนโลยีพลังงาน<br>
+                        "มาตรฐานโลก เพื่อคนไทย"
+                    </p>
+                    <div class="inline-flex items-center gap-2 bg-gray-800 border border-gray-700 rounded-lg px-4 py-2">
+                        <i class="fa-solid fa-check-circle text-green-400"></i>
+                        <span class="text-sm font-medium text-gray-300">DBD Registered Verified</span>
+                    </div>
+                </div>
+
+                <!-- Executive Team & Addresses -->
+                <div class="lg:col-span-5">
+                    <h4 class="text-lg font-bold text-white mb-6 border-b border-gray-800 pb-2">ทีมผู้บริหาร & สถานที่ตั้ง</h4>
+                    
+                    <div class="space-y-6">
+                        <!-- Khon Kaen HQ -->
+                        <div class="bg-gray-800/50 p-4 rounded-xl border border-gray-700/50">
+                            <div class="flex items-center gap-3 mb-2">
+                                <i class="fa-solid fa-user-tie text-brand-accent"></i>
+                                <span class="font-bold text-white">Mr. Yaradin Minyan (CEO)</span>
+                            </div>
+                            <div class="flex items-start gap-3 mt-3">
+                                <i class="fa-solid fa-building text-gray-400 mt-1"></i>
+                                <div>
+                                    <span class="text-sm font-semibold text-gray-300 block mb-1">สำนักงานใหญ่ (ขอนแก่น)</span>
+                                    <p class="text-sm text-gray-400 leading-relaxed">
+                                        5/1-5/2 หมู่ 13, ตำบลกุดเค้า<br>
+                                        อำเภอมัญจาคีรี จังหวัดขอนแก่น 40160
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- BKK Operations -->
+                        <div class="bg-gray-800/50 p-4 rounded-xl border border-gray-700/50">
+                            <div class="flex items-center gap-3 mb-2">
+                                <i class="fa-solid fa-user-tie text-brand-accent"></i>
+                                <span class="font-bold text-white">Ms. Garaya Pata [กัลยา ปัตย์ตา] (Executive)</span>
+                            </div>
+                            <div class="flex items-start gap-3 mt-3">
+                                <i class="fa-solid fa-building text-gray-400 mt-1"></i>
+                                <div>
+                                    <span class="text-sm font-semibold text-gray-300 block mb-1">สำนักงานปฏิบัติการ (กรุงเทพฯ)</span>
+                                    <p class="text-sm text-gray-400 leading-relaxed">
+                                        1 ซอย ฉลองกรุง 1 แขวงลาดกระบัง<br>
+                                        เขตลาดกระบัง กรุงเทพมหานคร 10520
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Links -->
+                <div class="lg:col-span-3">
+                    <h4 class="text-lg font-bold text-white mb-6 border-b border-gray-800 pb-2">ติดต่อสอบถาม</h4>
+                    
+                    <ul class="space-y-4">
+                        <li>
+                            <a href="tel:0840148961" class="flex items-center gap-3 text-gray-400 hover:text-white transition-colors">
+                                <div class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-brand-accent">
+                                    <i class="fa-solid fa-phone"></i>
+                                </div>
+                                <div>
+                                    <span class="block text-sm">โทรศัพท์</span>
+                                    <span class="font-medium">084-014-8961</span><br>
+                                    <span class="font-medium">092-954-3038</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://line.me/R/ti/p/@213njvrj" target="_blank" class="flex items-center gap-3 text-gray-400 hover:text-white transition-colors">
+                                <div class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-[#00B900]">
+                                    <i class="fa-brands fa-line text-xl"></i>
+                                </div>
+                                <div>
+                                    <span class="block text-sm">LINE ID / บริการลูกค้า</span>
+                                    <span class="font-medium">@213njvrj</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:executive@darayar.online.co" class="flex items-center gap-3 text-gray-400 hover:text-white transition-colors">
+                                <div class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-blue-400">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <span class="block text-sm">อีเมลติดต่อ</span>
+                                    <span class="font-medium text-sm">executive@darayar.online.co</span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-gray-500 text-sm text-center md:text-left">
+                    &copy; 2026 DALAYAR Bicycle Lifestyle Co., Ltd. All rights reserved.
+                </p>
+                <div class="flex gap-4 text-sm text-gray-500">
+                    <a href="https://www.darayar.online" target="_blank" class="hover:text-white transition">www.darayar.online</a>
+                    <span>|</span>
+                    <a href="https://www.darayar.online/โปรดอานนโยบายของรววจากลกคาโดย-google" target="_blank" class="hover:text-white transition">ความเป็นส่วนตัวและข้อกำหนด</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
