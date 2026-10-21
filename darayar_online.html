@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Darayar Online - ดารายา ออนไลน์</title>
+    <!-- Google Fonts: Kanit for Thai typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Kanit', 'sans-serif'],
+                    },
+                    colors: {
+                        line: '#00B900',
+                        brand: '#4F46E5', // Indigo 600
+                        brandDark: '#3730A3', // Indigo 800
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Kanit', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .hero-bg {
+            background: linear-gradient(135deg, #f6f8fd 0%, #f1f5f9 100%);
+        }
+        .blob-shape {
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+    </style>
+</head>
+<body class="text-gray-800 bg-gray-50">
+
+    <!-- Navbar -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#" class="text-2xl font-bold text-brand">
+                        <i class="fa-solid fa-store mr-2"></i>Darayar<span class="text-gray-800">Online</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-600 hover:text-brand px-3 py-2 rounded-md text-sm font-medium transition">หน้าแรก</a>
+                    <a href="#shop" class="text-gray-600 hover:text-brand px-3 py-2 rounded-md text-sm font-medium transition">สินค้าและบริการ</a>
+                    <a href="#payment" class="text-gray-600 hover:text-brand px-3 py-2 rounded-md text-sm font-medium transition">ช่องทางการชำระเงิน</a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="https://line.me/R/ti/p/@213njvrj" target="_blank" class="hidden md:inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-full shadow-sm text-sm font-medium text-white bg-line hover:bg-green-600 transition">
+                        <i class="fa-brands fa-line text-lg mr-2"></i> ติดต่อแอดมิน
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg relative overflow-hidden pt-16 pb-24 sm:pt-24 sm:pb-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-3xl mx-auto">
+                <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 tracking-tight mb-6">
+                    ยินดีต้อนรับสู่ <span class="text-brand text-transparent bg-clip-text bg-gradient-to-r from-brand to-purple-600">Darayar Online</span>
+                </h1>
+                <p class="mt-4 text-lg sm:text-xl text-gray-600 mb-10">
+                    แหล่งรวมสินค้าคุณภาพ บริการประทับใจ พร้อมช่องทางการชำระเงินที่หลากหลาย รวมถึงรองรับโครงการจากภาครัฐ
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6">
+                    <a href="https://shop.line.me/@213njvrj" target="_blank" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-full text-white bg-brand hover:bg-brandDark shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                        <i class="fa-solid fa-basket-shopping mr-2"></i> เลือกชมสินค้า
+                    </a>
+                    <a href="https://line.me/R/ti/p/@213njvrj" target="_blank" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-full text-white bg-line hover:bg-green-600 shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                        <i class="fa-brands fa-line text-xl mr-2"></i> สอบถามผ่าน LINE
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- Decorative elements -->
+        <div class="absolute top-0 left-0 w-64 h-64 bg-purple-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 blob-shape"></div>
+        <div class="absolute top-0 right-0 w-72 h-72 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 blob-shape" style="animation-delay: 2s;"></div>
+    </section>
+
+    <!-- Line Shopping Section -->
+    <section id="shop" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
+                <div class="mb-10 lg:mb-0">
+                    <div class="relative rounded-2xl overflow-hidden shadow-2xl">
+                        <!-- Fallback Image if the original is not available or represents the shop -->
+                        <img src="https://placehold.co/800x600/f3f4f6/4f46e5?text=LINE+SHOPPING+STORE" alt="ภาพหน้าแรกเว็บ" class="w-full h-auto object-cover" onerror="this.src='https://placehold.co/800x600/f3f4f6/4f46e5?text=Darayar+Online';">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
+                            <div class="p-8">
+                                <p class="text-white font-medium text-lg">รายการสินค้าพร้อมภาพรวมการสั่งซื้อ</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">ช้อปสะดวก ปลอดภัย ผ่าน LINE SHOPPING</h2>
+                    <p class="text-gray-600 text-lg mb-8 leading-relaxed">
+                        ลูกค้าสามารถเลือกชมสินค้าทั้งหมด สั่งซื้อ และชำระเงินได้อย่างง่ายดายผ่านแพลตฟอร์ม LINE SHOPPING ซึ่งเรารวบรวมรายการสินค้าที่ครบครันไว้ให้บริการคุณตลอด 24 ชั่วโมง
+                    </p>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 h-6 w-6 rounded-full bg-green-100 flex items-center justify-center border border-green-200 mt-1">
+                                <i class="fa-solid fa-check text-green-600 text-xs"></i>
+                            </div>
+                            <p class="ml-3 text-gray-700">มีระบบตะกร้าสินค้า ดูสรุปยอดก่อนชำระเงิน</p>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 h-6 w-6 rounded-full bg-green-100 flex items-center justify-center border border-green-200 mt-1">
+                                <i class="fa-solid fa-check text-green-600 text-xs"></i>
+                            </div>
+                            <p class="ml-3 text-gray-700">อัปเดตสถานะการจัดส่งผ่าน LINE ทันที</p>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 h-6 w-6 rounded-full bg-green-100 flex items-center justify-center border border-green-200 mt-1">
+                                <i class="fa-solid fa-check text-green-600 text-xs"></i>
+                            </div>
+                            <p class="ml-3 text-gray-700">สะสมพอยท์และรับสิทธิพิเศษมากมาย</p>
+                        </li>
+                    </ul>
+                    <a href="https://shop.line.me/@213njvrj" target="_blank" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-lg shadow-sm text-white bg-gray-900 hover:bg-gray-800 transition">
+                        ไปที่หน้าร้านของเรา <i class="fa-solid fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Government Payment / QR Code Section -->
+    <section id="payment" class="py-20 bg-blue-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">รองรับการชำระเงินโครงการภาครัฐ</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto mb-12 text-lg">
+                ร้านค้ารองรับการชำระเงินผ่านแอปพลิเคชัน "เป๋าตัง" และ "ถุงเงิน" ลูกค้าสามารถสแกน QR Code ด้านล่างเพื่อชำระค่าสินค้าได้ทันที
+            </p>
+            
+            <div class="bg-white p-8 rounded-3xl shadow-xl max-w-md mx-auto transform transition duration-500 hover:scale-105 border border-blue-100">
+                <div class="flex justify-center items-center space-x-4 mb-6">
+                    <div class="bg-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-md">
+                        <i class="fa-solid fa-wallet text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-800">ร้านค้าถุงเงิน</h3>
+                </div>
+                
+                <div class="bg-gray-50 p-4 rounded-xl border-2 border-dashed border-gray-300 mb-6">
+                    <!-- Government Payment QR Code Image -->
+                    <img src="https://cdn.phototourl.com/member/2026-10-21-e3901aad-4b32-4259-8537-8ba8012c4453.png" alt="QR Code ร้านค้าถุงเงิน" class="w-full max-w-[250px] mx-auto rounded-lg" onerror="this.src='https://placehold.co/300x300/ffffff/000000?text=QR+Code+Error';">
+                </div>
+                
+                <p class="text-sm text-gray-500 mb-6">สแกนเพื่อชำระเงินผ่านแอปเป๋าตัง</p>
+                
+                <div class="border-t border-gray-100 pt-6">
+                    <p class="text-sm font-medium text-gray-700">หรือมีข้อสงสัยเกี่ยวกับการชำระเงิน?</p>
+                    <a href="https://line.me/R/ti/p/@213njvrj" target="_blank" class="mt-3 inline-flex items-center text-brand hover:text-brandDark font-semibold">
+                        ติดต่อฝ่ายบริการ <i class="fa-solid fa-chevron-right ml-1 text-xs"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4"><i class="fa-solid fa-store mr-2 text-brand"></i>Darayar</h3>
+                    <p class="text-gray-400 mb-6 text-sm leading-relaxed">
+                        www.darayar.online เว็บไซต์เพื่อการสั่งซื้อสินค้าอย่างเป็นทางการ พร้อมบริการที่รวดเร็ว ปลอดภัย และรองรับทุกช่องทางการชำระเงิน
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://line.me/R/ti/p/@213njvrj" target="_blank" class="text-gray-400 hover:text-line transition text-xl">
+                            <i class="fa-brands fa-line"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition text-xl">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 border-b border-gray-700 pb-2 inline-block">ลิงก์ที่สำคัญ</h4>
+                    <ul class="space-y-3 text-sm text-gray-400">
+                        <li><a href="https://shop.line.me/@213njvrj" target="_blank" class="hover:text-brand transition">หน้าร้านและรายการสินค้า</a></li>
+                        <li><a href="https://line.me/R/ti/p/@213njvrj" target="_blank" class="hover:text-brand transition">ติดต่อเจ้าหน้าที่ / LINE Chat</a></li>
+                        <li><a href="#payment" class="hover:text-brand transition">ข้อมูลการชำระเงิน (ร้านค้าถุงเงิน)</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 border-b border-gray-700 pb-2 inline-block">นโยบายของเรา</h4>
+                    <ul class="space-y-3 text-sm text-gray-400">
+                        <li>
+                            <a href="https://www.darayar.online/โปรดอานนโยบายของรววจากลกคาโดย-google" target="_blank" class="hover:text-brand transition flex items-center">
+                                <i class="fa-solid fa-shield-halved mr-2"></i> นโยบายการรีวิวจากลูกค้า (โดย Google)
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-500 text-sm mb-4 md:mb-0">
+                    &copy; 2026 Darayar Online. All rights reserved.
+                </p>
+                <p class="text-gray-600 text-xs">
+                    Domain: www.darayar.online
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Action Button for Line -->
+    <a href="https://line.me/R/ti/p/@213njvrj" target="_blank" class="fixed bottom-6 right-6 bg-line text-white p-4 rounded-full shadow-2xl hover:bg-green-600 transition duration-300 transform hover:scale-110 z-50 flex items-center justify-center" aria-label="ติดต่อเราทาง Line">
+        <i class="fa-brands fa-line text-3xl"></i>
+    </a>
+
+</body>
+</html>
